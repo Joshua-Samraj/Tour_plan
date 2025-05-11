@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #000000;
+  color: #333;
+}
+
+/* Container class for alignment */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.highlight-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.highlight-link:hover .highlight {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Header styles */
+header {
+  background: #004d40;
+  color: white;
+  padding: 1rem 0;
+  position: fixed; /* Fixes the header at the top */
+  top: 0; /* Aligns the header to the top */
+  left: 0; /* Aligns the header to the left */
+  width: 100%; /* Ensures the header spans the full width */
+  z-index: 1000; /* Ensures the header stays on top of other content */
+}
+
+.hero {
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px; /* Adds space below the fixed header */
+  box-sizing: border-box; /* Includes padding in the element’s total width and height */
+}
+
+.hero .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Ooty.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: black; /* Fill space if image doesn't fully cover */
+  background-attachment: fixed;
+  opacity: 0.5; /* Initial opacity (0.5) */
+  filter: blur(0); /* Initial blur (0) */
+  transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+  z-index: -1; /* Ensure the image stays behind the text */
+}
+
+.hero .content {
+  position: relative;
+  z-index: 1; /* Ensures content stays above the background */
+  color: white;
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* Hero section */
+
+
+
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-content {
+  color: white;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background: #ffcc00;
+  color: #333;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #ffd633;
+}
+
+/* Intro section */
+.intro {
+  background: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Highlights section */
+.highlights {
+  background: #e0f2f1;
+  padding: 3rem 0;
+}
+
+.highlight-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.highlight {
+  flex: 1 1 30%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+}
+
+.highlight img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.highlight h3 {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.highlight p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .highlight-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight {
+    flex: 1 1 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  
+}
+
+
+
+
+
+.trip-plan {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.trip-plan h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.day-plan {
+  margin-bottom: 30px;
+}
+
+.day-plan h3 {
+  color: #2e7d32;
+}
+
+.day-plan ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+
+
+.stay, .gallery {
+  padding: 50px 0;
+}
+
+.stay-options, .gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stay-option, .gallery-item {
+  flex: 1 1 30%;
+}
+
+.stay-option h3, .gallery-item img {
+  width: 100%;
+  height: auto;
+}
